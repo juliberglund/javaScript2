@@ -25,20 +25,19 @@
   // for how to make a string uppercase). Use .forEach to run the function for each
   // dog in the dogs array.
   function printDogNameUppercase(capslock) {
-    console.log("The ".toUpperCase() + capslock + " barks.".toUpperCase());
+    console.log(
+      "The ".toUpperCase() + capslock.toUpperCase() + " barks.".toUpperCase()
+    );
   }
   dogs.forEach(printDogNameUppercase);
 
   // Task 3: Write a forEach function which uses an anonymous function instead of defining a
   // named function like the examples above (hint; the lecture material used anonymous functions)
   // and uses console.log to print "The {dogName} needs to go for a walk!".
-  // Anonymous function as an argument to setTimeout
 
-  const setoutTime = function () {
-    console.log("This message is printed after 3 sec");
-  };
-
-  setTimeout(setoutTime, 3000);
+  dogs.forEach(function (dogName) {
+    console.log(`The ${dogName} needs to go for a walk!`);
+  });
 </script>
 
 <p>Open the console in the browser to see the output of this script.</p>
